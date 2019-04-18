@@ -1,14 +1,509 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: aqua url(resources/images/background.jpg);
+  background-size: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.Authorization-header {
+  font-family: "Avenir Next Cyr", monospace;
+  font-size: 16pt;
+  display: inline-block;
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10%;
+}
+
+.BuyView {
+  font-family: "Avenir Next Cyr", monospace;
+  font-size: 16pt;
+  display: block;
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10%;
+}
+
+.SellView {
+  font-family: "Avenir Next Cyr", monospace;
+  font-size: 16pt;
+  display: block;
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10%;
+}
+
+.LoginInput {
+  background-color: #4ca0ff;
+  font-size: 14pt;
+  margin: 5px 15px;
+  border: 1px #4ca0ff;
+  border-radius: 5px;
+  width: 270px;
+  height: 45px;
+  padding: 0 20px;
+}
+
+.PasswordInput {
+  background-color: #4ca0ff;
+  font-size: 14pt;
+  margin: 5px 15px;
+  border: 1px #4ca0ff;
+  border-radius: 5px;
+  width: 270px;
+  height: 45px;
+  padding: 0 20px;
+}
+
+.LoginInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-size: 14pt;
+  opacity: 1; /* Firefox */
+  padding: 0 20px;
+}
+
+.LoginInput::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+  font-size: 14pt;
+  padding: 0 20px;
+}
+
+.LoginInput::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+  font-size: 14pt;
+  padding: 0 20px;
+}
+
+.PasswordInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  font-size: 14pt;
+  opacity: 1; /* Firefox */
+  padding: 0 20px;
+}
+
+.PasswordInput::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+  font-size: 14pt;
+  padding: 0 20px;
+}
+
+.PasswordInput::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+  padding: 0 20px;
+}
+
+.AuthorizationButtons {
+  float: right;
+  margin: 5px;
+  margin-right: 15px;
+}
+p {
+  margin: 5px;
+}
+
+.AuthorizationLabel {
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.AuthorizationErrorLabel {
+  font-size: 10pt;
+  color: red;
+  height: 10pt;
+  margin-top: 2px;
+}
+
+.LoginButton {
+  background-color: #149830;
+  font-size: 13pt;
+  margin: 5px;
+  border: 1px #149830;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: 0;
+  width:80px;
+  height:40px;
+  color:white;
+}
+
+.RegistrationButton {
+  background-color: #080436;
+  font-size: 13pt;
+  margin: 5px;
+  border: 1px #080436;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: 0;
+  width: 80px;
+  height: 40px;
+  color:white;
+}
+
+.Authorization {
+  display: flex;
+  justify-content: center; /*Центрирование по горизонтали*/
+}
+
+.Terminal {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.TerminalHeader {
+  width: 100%;
+  height: 60px;
+  background-color: #05022a;
+  margin:0;
+}
+
+.CompanyIcon {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: white url('resources/images/company_icon.jpg');
+  background-size: 100%;
+  margin: 0;
+}
+
+.BalanceContainer {
+  display: inline-block;
+  margin: 0;
+  margin-left: 30px;
+  padding-top: 18px;
+  color: white;
+  font-size: 16pt;
+  height: 100%;
+  vertical-align: top;
+}
+.rightPanel {
+  display: inline-block;
+  float: right;
+  margin-right: 5%;
+  text-align: center;
+}
+
+.LoginContainer {
+  display: inline-block;
+  background-color: #05022a;
+  width: 100px;
+  margin: 0;
+  margin-top: 18px;
+  font-size: 16pt;
+  color: white;
+  border: 1px #05022a;
+  height: 100%;
+}
+
+.TransactionHistoryContainer {
+  display: inline-block;
+  background-color: #05022a;
+  width: 130px;
+  margin-right: 20px;
+  margin-top: 18px;
+  font-size: 16pt;
+  color: white;
+  border: 1px #05022a;
+  height: 100%;
+}
+
+
+.BalanceValueContainer {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.Account {
+  display: block;
+  float: right;
+  background-color: white;
+  margin: 0;
+  width: 300px;
+  height: 380px;
+  border: 1px solid #05022a;
+  padding: 5px 5px;
+  margin-right: 5%;
+  margin-top: 10px;
+  overflow:scroll;
+    overflow-x:hidden;
+}
+
+.TransactionHistory {
+  display: block;
+  float: right;
+  background-color: white;
+  margin: 0;
+  width: 300px;
+  height: 380px;
+  border: 1px solid #05022a;
+  padding: 5px 5px;
+  margin-right: 10%;
+  margin-top: 10px;
+  overflow:scroll;
+    overflow-x:hidden;
+}
+.StockIcon {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: inline-block;
+  bottom: 0;
+}
+
+.AccountStockDataContainer {
+  display: inline-block;
+}
+.AccountStockDataTable {
+  width: 230px;
+  height: 100%;
+}
+
+.AccountStockItem {
+  height: 50px;
+  margin: 5px;
+  border: 1px solid #05022a;
+  border-radius: 5px;
+}
+
+.StockName {
+  text-align: left;
+  font-size: 14pt;
+}
+
+.StockPrice {
+  text-align: right;
+  font-size: 14pt;
+}
+
+.StockCount {
+  text-align: left;
+  font-size: 11pt;
+}
+
+.StockPriceDelta {
+  text-align: right;
+  font-size: 11pt;
+}
+
+.StocksContainer {
+  width: 100%;
+  margin: 0;
+  margin-left: 85px;
+  padding: 0;
+}
+
+.StockView {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  display: block;
+  background-color: white;
+  margin: 10px;
+  border: 1px solid #05022a;
+  padding: 5px;
+}
+ 
+
+.BuyButton {
+  display: inline-block;
+  background-color: #149830;
+  font-size: 13pt;
+  margin: 5px;
+  border: 1px #149830;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: 0;
+  width:60px;
+  height:25px;
+  color:white;
+}
+
+.SellButton {
+  display: inline-block;
+  background-color: #080436;
+  font-size: 13pt;
+  margin: 5px;
+  border: 1px #080436;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: 0;
+  width: 60px;
+  height: 25px;
+  color:white;
+}
+
+.StockButtons {
+  display: inline-block;
+  margin: 5px;
+  bottom: 0;
+  float: right;
+}
+
+.StockOperationsContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;  
+}
+
+.StockGraph {
+  width: 90%;
+  height: 90%;
+  margin: 5px;
+  display: inline-block;
+  background-color: bisque;
+}
+
+.StockViewName {
+  display: inline-block;
+  margin: 5px;
+}
+
+.StockViewPrice {
+  display: inline-block;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#circleG{
+	width:60px;
+  display: inline-block;
+  text-align: center;
+}
+
+.circleG{
+	background-color:rgb(255,255,255);
+  float:left;
+	height:10px;
+	margin-left:7px;
+	width:10px;
+	animation-name:bounce_circleG;
+		-o-animation-name:bounce_circleG;
+		-ms-animation-name:bounce_circleG;
+		-webkit-animation-name:bounce_circleG;
+		-moz-animation-name:bounce_circleG;
+	animation-duration:2.24s;
+		-o-animation-duration:2.24s;
+		-ms-animation-duration:2.24s;
+		-webkit-animation-duration:2.24s;
+		-moz-animation-duration:2.24s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	border-radius:10px;
+		-o-border-radius:10px;
+		-ms-border-radius:10px;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+}
+
+#circleG_1{
+	animation-delay:0.45s;
+		-o-animation-delay:0.45s;
+		-ms-animation-delay:0.45s;
+		-webkit-animation-delay:0.45s;
+		-moz-animation-delay:0.45s;
+}
+
+#circleG_2{
+	animation-delay:1.05s;
+		-o-animation-delay:1.05s;
+		-ms-animation-delay:1.05s;
+		-webkit-animation-delay:1.05s;
+		-moz-animation-delay:1.05s;
+}
+
+#circleG_3{
+	animation-delay:1.35s;
+		-o-animation-delay:1.35s;
+		-ms-animation-delay:1.35s;
+		-webkit-animation-delay:1.35s;
+		-moz-animation-delay:1.35s;
+}
+
+
+
+@keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:#4ca0ff;
+	}
+
+	100%{}
+}
+
+@-o-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:#4ca0ff;
+	}
+
+	100%{}
+}
+
+@-ms-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:#4ca0ff;
+	}
+
+	100%{}
+}
+
+@-webkit-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:#4ca0ff;
+	}
+
+	100%{}
+}
+
+@-moz-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:#4ca0ff;
+	}
+
+	100%{}
 }
