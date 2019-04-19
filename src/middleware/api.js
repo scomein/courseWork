@@ -7,7 +7,7 @@ export const post = (endpoint, token, data) => {
     method: 'POST',
     body: JSON.stringify(data),
     headers: new Headers({'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `${token}`,
         'Access-Control-Allow-Origin': 'http://' + window.location.host,
         'Access-Control-Request-Method': 'POST,GET'
       })
@@ -37,7 +37,10 @@ export const get = (endpoint, token, data) => {
   }
   return fetch(url, {
     method: 'get',
-    headers: new Headers({"Authorization": "Bearer " + token})
+    headers: new Headers({"Authorization": token,
+         'Access-Control-Allow-Origin': 'http://' + window.location.host,
+    'Access-Control-Request-Method': 'POST,GET'
+})
   })
   .then(response =>
     response.json().then(json => {
